@@ -1,0 +1,25 @@
+{
+  "name": "01-expense-tracker",
+  "version": "1.0.0",
+  "description": "Expense tracker app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "Fadi Naddaf",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.1",
+    "express": "^4.18.1",
+    "jest": "^28.1.1",
+    "node": "^18.4.0",
+    "nodemon": "^2.0.18",
+    "supertest": "^6.2.3"
+  }
+}

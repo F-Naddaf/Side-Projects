@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./public/style.css" />
+  </head>
+  <body>
+    <div id="user-interface">
+      <nav class="nav">
+        <ul>
+          <li id="logo"><img class="logo-image" src = './public/Image/Expense-logo.png' alt="Expense" height="120px"/></li>
+          <li id="Expense">Expense Tracker</li>
+        </ul>
+      </nav>
+      <h2 class="header">Add A New Item</h2> 
+      <form id="form-name">
+        <h3 class="input-description"> Name:</h2>
+        <input type="text" id="input-name" placeholder="What was the Expense made?"/>
+      </form>
+      <form class="form-2">
+          <h3 class="input-description"> Date:</h2>
+          <input type="text" class="input-2" placeholder="dd/mm/yy"/>
+          <h3 class="input-description"> Amount:</h2>
+          <input type="text" class="input-2"/>
+      </form> 
+    </div>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
