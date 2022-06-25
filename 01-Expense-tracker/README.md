@@ -10,6 +10,7 @@ This app help you tracking your expanses.
 
 ## 2. Link and Preview
 
+![App view](./public/Capture.JPG)
 Project link is available at [Expense Tracker App](https://f-naddaf.github.io/Side-Project)
 
 ## 3. App Folder Structure
