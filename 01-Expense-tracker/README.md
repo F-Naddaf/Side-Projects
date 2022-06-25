@@ -3,7 +3,7 @@
 ## 1. Description
 
 This app help you tracking your expanses.</br>
-1- To how you are going to pay.</br>
+1- To whom you are going to pay.</br>
 2- When you have to pay.</br>
 3- How much you have to pay.</br>
 4- The total amount you have to pay.
