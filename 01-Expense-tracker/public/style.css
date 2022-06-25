@@ -77,6 +77,22 @@ ul {
   border: 1px solid #66728a;
 }
 
+#form-search {
+  display: flex;
+  margin: 10px 0;
+  width: 78vw;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#input-search {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  width: 60rem;
+  border: 1px solid #66728a;
+}
+
 .input-description {
   font-size: 18px;
   font-weight: 500;
@@ -102,7 +118,7 @@ ul {
   display: block;
   text-align: center;
   width: 175px;
-  margin: 10px auto;
+  margin: 30px auto;
   border-radius: 10px;
 }
 
@@ -113,7 +129,7 @@ ul {
 
 table {
   width: 70%;
-  margin: 70px auto auto auto;
+  margin: 40px auto auto auto;
 }
 
 th {
