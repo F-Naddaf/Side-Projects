@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./public/style.css" />
+  </head>
+  <body>
+    <div id="user-interface">
+      <nav class="nav">
+        <ul>
+          <li id="logo"><img class="logo-image" src = './public/Image/Expense-logo.png' alt="Expense" height="120px"/></li>
+          <li id="Expense">Expense Tracker</li>
+        </ul>
+      </nav>
+      <h2 class="header">Add A New Item</h2> 
+
+        <form id="form-name">
+          <h3 class="input-description"> Name:</h2>
+          <input type="text" id="input-name" placeholder="What was the Expense made?"/>
+        </form>
+        <form id="form-name">
+          <h3 class="input-description"> Date:</h2>
+          <input type="text" class="input-2" placeholder="dd/mm/yy"/>
+          <h3 class="input-description"> Amount:</h2>
+          <input type="text" class="input-2"/>
+        </form>
+        <button id="submit">Add Expense</button>
+        <section class="section">
+          <table id="table">
+            <tr>
+              <th id="table-name">Name</th>
+              <th id="table-date">Date</th>
+              <th id="table-amount">Amount</th>
+              <th id="del-edit">Delete/Edit</th>
+            </tr>
+            <tr>
+              <td id="table-name">McDonald's</td>
+              <td id="table-date">12-10-2022</td>
+              <td id="table-amount">$10</td>
+              <td id="del-edit">Delete/Edit</td>
+            </tr>
+            <tr>
+              <td id="table-name">Groen West</td>
+              <td id="table-date">09-09-2022</td>
+              <td id="table-amount">$210</td>
+              <td id="del-edit">Delete/Edit</td>
+            </tr>
+            <tr>
+              <td id="table-name">Vattenfall</td>
+              <td id="table-date">01-09-2022</td>
+              <td id="table-amount">$90</td>
+              <td id="del-edit">Delete/Edit</td>
+            </tr>  
+          </table>
+          <form id="form-total">
+            <h3 class="total"> Total:</h2>
+            <input type="text" id="input-total"/>
+          </form>
+        </section>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
