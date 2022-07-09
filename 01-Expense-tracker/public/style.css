@@ -7,14 +7,12 @@
 }
 
 :root {
-  --logo-blue-color: #0c949c;
-  --logo-blue-color-1: #0494b8;
-  --logo-blue-color-2: #006c87;
+  --logo-blue-color: #006c87;
   --expense-green-color: #078a0d;
   --expense-green-button: #016b06;
-  --light-gray-color: #f3f4f7;
-  --medium-gray-color: #d4d9e3;
-  --dark-gry-color: #66728a;
+  --light-gray-table-even: #f1f1f1;
+  --light-gray-table-odd: #fffefe;
+  --dark-gry-color: #9da3ad;
 }
 
 body {
@@ -51,7 +49,7 @@ ul {
   font-size: 4rem;
   font-weight: bold;
   text-align: center;
-  color: var(--logo-blue-color-2);
+  color: var(--logo-blue-color);
 }
 
 .header {
@@ -77,6 +75,13 @@ ul {
   border: 1px solid #66728a;
 }
 
+#search-section {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
 #form-search {
   display: flex;
   margin: 10px 0;
@@ -90,14 +95,46 @@ ul {
   font-size: 14px;
   padding: 5px;
   width: 60rem;
+  height: 2rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   border: 1px solid #66728a;
+}
+
+#search-btn {
+  position: relative;
+  right: 5rem;
+  width: 5rem;
+  height: 2rem;
+  font-size: 18px;
+  background-color: var(--logo-blue-color);
+  border: none;
+  transition: all 0.3s linear;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+}
+
+#search-btn:hover {
+  background-color: rgba(0, 108, 135, 0.6);
+  cursor: pointer;
+}
+
+.search-not-found {
+  font-size: 22px;
+  font-weight: 500;
+  color: red;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10rem;
 }
 
 .input-description {
   font-size: 18px;
   font-weight: 500;
   padding: 5px 10px;
-  color: var(--logo-blue-color-2);
+  color: var(--logo-blue-color);
 }
 
 .input-2 {
@@ -108,7 +145,11 @@ ul {
   border: 1px solid #66728a;
 }
 
-#submit {
+#buttons {
+  display: flex;
+}
+
+#submit-btn {
   color: rgb(255, 255, 255);
   background-color: var(--expense-green-button);
   border: 1px solid #66728a;
@@ -117,25 +158,51 @@ ul {
   padding: 10px;
   display: block;
   text-align: center;
-  width: 175px;
-  margin: 30px auto;
+  width: 180px;
+  margin: 30px 30px 30px auto;
   border-radius: 10px;
 }
 
-#submit:hover {
+#show-btn {
+  color: rgb(255, 255, 255);
+  background-color: var(--expense-green-button);
+  border: 1px solid #66728a;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  width: 180px;
+  margin: 30px auto 30px 30px;
+  border-radius: 10px;
+}
+
+#show-btn:disabled {
+  background-color: var(--dark-gry-color);
+  cursor: default;
+}
+
+#show-btn:disabled:hover {
+  background-color: var(--dark-gry-color);
+  cursor: default;
+  transform: scale(1);
+}
+
+#submit-btn:hover,
+#show-btn:hover {
   transform: scale(0.9);
   cursor: pointer;
 }
 
 table {
   width: 70%;
-  margin: 40px auto auto auto;
+  margin: 5rem auto auto auto;
 }
 
 th {
   text-align: center;
   font-size: 18px;
-  color: var(--logo-blue-color-2);
+  color: var(--logo-blue-color);
   padding: 8px;
 }
 
@@ -162,6 +229,7 @@ th,
 td {
   border: 1px solid var(--dark-gry-color);
   border-collapse: collapse;
+  margin-bottom: 5px;
 }
 
 tr:nth-child(even) {
@@ -195,5 +263,63 @@ tr:nth-child(odd) {
   font-size: 18px;
   font-weight: 500;
   padding: 0 10px;
-  color: var(--logo-blue-color-2);
+  color: var(--logo-blue-color);
+}
+
+.error {
+  display: flex;
+  margin: auto;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#error-container {
+  width: 700px;
+  height: 150px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 100;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -90%);
+  background: rgb(158, 7, 7);
+  border-radius: 10px;
+}
+
+#error-message {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--light-gray-table-even);
+}
+
+#error-btn {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  width: 80px;
+  background-color: var(--light-gray-table-even);
+  border: 1px solid var(--light-gray-table-even);
+  color: var(--logo-blue-color);
+  border-radius: 5px;
+}
+
+#error-btn:hover {
+  transform: scale(0.9);
+  cursor: pointer;
 }
