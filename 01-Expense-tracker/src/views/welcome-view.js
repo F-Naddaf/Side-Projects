@@ -19,13 +19,13 @@ export const mainExpenseAdding = () => {
   <h2 class="header">Add A New Item</h2> 
   <form id="form-name">
     <h3 class="input-description"> Name:</h2>
-    <input type="text" id="input-name" placeholder="What was the Expense made?"/>
+    <input type="text" id="input-name" class="input-name" placeholder="What was the Expense made?"/>
   </form>
   <form id="form-name">
     <h3 class="input-description"> Date:</h2>
-    <input type="date" id="input-date" class="input-2" placeholder="dd/mm/yy"/>
+    <input type="date" id="input-desc" class="input-2" placeholder="dd/mm/yy"/>
     <h3 class="input-description"> Amount:</h2>
-    <input type="number" placeholder="Amount" id="input-amount" class="input-2"/>
+    <input type="number" id="input-amount" class="input-2" placeholder="Amount"/>
   </form>
   <div id="buttons">
     <button id="submit-btn">Add Expense</button>

@@ -39,11 +39,10 @@ const inputChecker = () => {
   let inputAmount = document.getElementById('input-amount').value;
   if (inputName === '' || inputDescription === '' || inputAmount === '') {
     failedInputMessage();
+  } else {
+    return;
+    // addToExpanseList();
   }
-  // else {
-  //   return;
-  // addToExpanseList();
-  // }
 };
 
 const failedInputMessage = () => {
