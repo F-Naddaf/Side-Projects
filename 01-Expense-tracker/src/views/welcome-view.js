@@ -52,26 +52,28 @@ export const viewExpenseSection = () => {
         <th id="table-name">Name</th>
         <th id="table-date">Date</th>
         <th id="table-amount">Amount</th>
-        <th id="del-edit">Delete/Edit</th>
+        <th id="del-edit">Delete</th>
       </tr>
+    <tbody id="table-body">
       <tr>
         <td id="table-name">McDonald's</td>
         <td id="table-date">12-10-2022</td>
         <td id="table-amount">$10</td>
-        <td id="del-edit">Delete/Edit</td>
+        <td id="del-edit"><i id="delete-icon" class="fa-solid fa-trash-can"></i></td>
       </tr>
       <tr>
         <td id="table-name">Groen West</td>
         <td id="table-date">09-09-2022</td>
         <td id="table-amount">$210</td>
-        <td id="del-edit">Delete/Edit</td>
+        <td id="del-edit"><i id="delete-icon" class="fa-solid fa-trash-can"></i></td>
       </tr>
       <tr>
         <td id="table-name">Vattenfall</td>
         <td id="table-date">01-09-2022</td>
         <td id="table-amount">$90</td>
-        <td id="del-edit">Delete/Edit</td>
-      </tr>  
+        <td id="del-edit"><i id="delete-icon" class="fa-solid fa-trash-can"></i></td>
+      </tr>
+    </tbody>  
     </table>
     <form id="form-total">
       <h3 class="total"> Total:</h2>
