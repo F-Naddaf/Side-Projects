@@ -1,8 +1,8 @@
 'use strict';
 
-import { USER_INTERFACE_TOP } from '../constants.js';
-import { USER_INTERFACE_BOTTOM } from '../constants.js';
-import { errorPopup } from '../views/errorPopup-view.js';
+import { failedSearchMessage } from './errors-page.js';
+import { USER_INTERFACE_TOP, USER_INTERFACE_BOTTOM } from '../constants.js';
+import { inputChecker } from './addExpanse-page.js';
 import {
   logoSection,
   mainExpenseAdding,
@@ -21,7 +21,7 @@ export const initWelcomePage = () => {
 
   const showExpenseBtn = document.getElementById('show-btn');
   showExpenseBtn.addEventListener('click', () => {
-    const userInterfaceBottom = document.getElementById(USER_INTERFACE_BOTTOM)
+    const userInterfaceBottom = document.getElementById(USER_INTERFACE_BOTTOM);
     userInterfaceBottom.innerHTML = '';
     const showAllExpense = viewExpenseSection();
     userInterfaceBottom.appendChild(showAllExpense);
@@ -32,45 +32,23 @@ export const initWelcomePage = () => {
   addExpButton.addEventListener('click', inputChecker);
 
   const searchButton = document.getElementById('search-btn');
-  searchButton.addEventListener('click', failedSearchMessage);
+  searchButton.addEventListener('click', searchChecker);
 };
 
-const inputChecker = () => {
-  let inputName = document.getElementById('input-name').value;
-  let inputDescription = document.getElementById('input-desc').value;
-  let inputAmount = document.getElementById('input-amount').value;
-  if (inputName === '' || inputDescription === '' || inputAmount === '') {
-    failedInputMessage();
-  } else {
-    return;
-    // addToExpanseList();
-  }
+export const ClearSearchFields = () => {
+  document.getElementById('input-search').value = '';
 };
 
-const failedInputMessage = () => {
-  const userInterfaceTop = document.getElementById(USER_INTERFACE_TOP);
-  const errorMessage = errorPopup();
-  userInterfaceTop.appendChild(errorMessage);
-  const closeButton = document.getElementById('error-btn');
-  closeButton.addEventListener('click', () => {
-    const closePopup = document.querySelector('.error');
-    closePopup.remove();
-  });
-  const closeSimple = document.getElementsByTagName('i');
-  closeSimple.addEventListener('click', () => {
-    const closePopup = document.querySelector('.error');
-    closePopup.remove();
-  });
-};
-
-const failedSearchMessage = () => {
+const searchChecker = () => {
   const userInterface = document.getElementById(USER_INTERFACE_BOTTOM);
   const expanseName = document.getElementById('input-search').value;
-  userInterface.innerHTML = '';
-  const failedSearch = document.createElement('p');
-  failedSearch.classList.add('search-not-found');
-  failedSearch.innerHTML = `Sorry, can't find the expanse name ( ${expanseName} ) may you entered a wrong expanse name!`;
-  userInterface.appendChild(failedSearch);
-  const showExpenseBtn = document.getElementById('show-btn');
-  showExpenseBtn.disabled = false
+  const dataTable = document.getElementsByTagName('td').value;
+  // const findExpanses = Array.from(dataTable).forEach(element => {
+  const findExpanses = dataTable.map((element) => {
+    if (element == expanseName) {
+      console.log(findExpanses, 'hello')
+    } else {
+      failedSearchMessage();
+    }
+  });
 };
