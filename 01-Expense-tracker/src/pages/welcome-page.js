@@ -28,11 +28,11 @@ export const initWelcomePage = () => {
     showExpenseBtn.disabled = true;
   });
 
-  const addExpButton = document.getElementById('submit-btn');
-  addExpButton.addEventListener('click', inputChecker);
+  const addExpButton = document.getElementById('expanse-form');
+  addExpButton.addEventListener('submit', inputChecker);
 
-  const searchButton = document.getElementById('search-btn');
-  searchButton.addEventListener('click', searchChecker);
+  const searchButton = document.getElementById('form-search');
+  searchButton.addEventListener('submit', searchChecker);
 };
 
 export const ClearSearchFields = () => {
