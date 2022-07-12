@@ -17,26 +17,28 @@ export const mainExpenseAdding = () => {
   element.classList.add('main');
   element.innerHTML = `
   <h2 class="header">Add A New Item</h2> 
-  <form id="form-name">
-    <h3 class="input-description"> Name:</h2>
+  <form id="expanse-form">
+    <div id="label-section-top">
+    <label class="input-description"> Name:</label>
     <input type="text" id="input-name" class="input-name" placeholder="What was the Expense made?"/>
+    </div>
+    <div id="label-section-down">
+      <label class="input-description"> Date:</label>
+      <input type="date" id="input-desc" class="input-2" placeholder="dd/mm/yy"/>
+      <label class="input-description"> Amount:</label>
+      <input type="number" id="input-amount" class="input-2" placeholder="Amount"/>
+    </div>
+    <div id="buttons">
+      <button id="submit-btn" type="submit">Add Expense</button>
+      <button id="show-btn" type="button">Show all Expense</button>
+    </div>
   </form>
-  <form id="form-name">
-    <h3 class="input-description"> Date:</h2>
-    <input type="date" id="input-desc" class="input-2" placeholder="dd/mm/yy"/>
-    <h3 class="input-description"> Amount:</h2>
-    <input type="number" id="input-amount" class="input-2" placeholder="Amount"/>
-  </form>
-  <div id="buttons">
-    <button id="submit-btn">Add Expense</button>
-    <button id="show-btn">Show all Expense</button>
-  </div>
   <div id="search-section">
-  <form id="form-search">
-  <h3 class="input-description"> Search:</h2>
+    <form id="form-search">
+      <label class="input-description"> Search:</label>
       <input type="text" id="input-search" placeholder="Find your Expense by name"/>
-      </form>
-      <button type="submit" id="search-btn">Search</button>
+      <button type="submit" id="search-btn" type="submit">Search</button>
+    </form>
   </div>    
 `;
   return element;
@@ -55,24 +57,6 @@ export const viewExpenseSection = () => {
         <th id="del-edit">Delete</th>
       </tr>
     <tbody id="table-body">
-      <tr>
-        <td id="table-name">McDonald's</td>
-        <td id="table-date">12-10-2022</td>
-        <td id="table-amount">$10</td>
-        <td id="del-edit"><i id="delete-icon" class="fa-solid fa-trash-can"></i></td>
-      </tr>
-      <tr>
-        <td id="table-name">Groen West</td>
-        <td id="table-date">09-09-2022</td>
-        <td id="table-amount">$210</td>
-        <td id="del-edit"><i id="delete-icon" class="fa-solid fa-trash-can"></i></td>
-      </tr>
-      <tr>
-        <td id="table-name">Vattenfall</td>
-        <td id="table-date">01-09-2022</td>
-        <td id="table-amount">$90</td>
-        <td id="del-edit"><i id="delete-icon" class="fa-solid fa-trash-can"></i></td>
-      </tr>
     </tbody>  
     </table>
     <form id="form-total">

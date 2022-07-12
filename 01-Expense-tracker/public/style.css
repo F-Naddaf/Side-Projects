@@ -59,12 +59,14 @@ ul {
   color: var(--expense-green-color);
 }
 
-#form-name {
+#expanse-form {
   display: flex;
   margin: 10px 0;
-  width: 78vw;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
+  width: 78vw;
 }
 
 #input-name {
@@ -75,18 +77,55 @@ ul {
   border: 1px solid #66728a;
 }
 
+#label-section-top {
+  margin-top: 12px;
+  width: 78vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#label-section-down {
+  margin-top: 12px;
+  width: 78vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10px;
+}
+
+.input-description {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  color: var(--logo-blue-color);
+}
+
+.input-2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  width: 27rem;
+  border: 1px solid #66728a;
+}
+
 #search-section {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #form-search {
   display: flex;
   margin: 10px 0;
-  width: 78vw;
+  width: 65vw;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #input-search {
@@ -95,14 +134,11 @@ ul {
   padding: 5px;
   width: 60rem;
   height: 2rem;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
   border: 1px solid #66728a;
 }
 
 #search-btn {
   position: relative;
-  right: 5rem;
   width: 5rem;
   height: 2rem;
   font-size: 16px;
@@ -127,21 +163,6 @@ ul {
   justify-content: center;
   position: relative;
   top: 10rem;
-}
-
-.input-description {
-  font-size: 18px;
-  font-weight: 500;
-  padding: 5px 10px;
-  color: var(--logo-blue-color);
-}
-
-.input-2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  padding: 5px;
-  width: 27rem;
-  border: 1px solid #66728a;
 }
 
 #buttons {
@@ -239,13 +260,6 @@ tr:nth-child(odd) {
   background-color: #fffefe;
 }
 
-#delete-icon {
-  position: relative;
-  color: rgb(221, 63, 63);
-  font-size: 18px;
-  margin: auto;
-}
-
 #form-total {
   display: flex;
   align-items: center;
@@ -321,15 +335,14 @@ tr:nth-child(odd) {
 }
 
 .fa-solid {
-  font-size: 15px;
-  color: rgb(255, 250, 250);
-  position: absolute;
-  right: 0;
-  margin-right: 12px;
+  position: relative;
+  color: rgb(221, 63, 63);
+  font-size: 18px;
+  margin: auto;
 }
 
 .fa-solid:hover {
-  color: #e0e0e0;
+  color: red;
   transform: scale(0.8);
   cursor: pointer;
 }
